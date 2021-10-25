@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PointsFragment"
+    android:background="@color/cardview_dark_background"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/corners_rounded"
+            android:gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="6"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                >
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pantalon limpio y arregrado"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:layout_weight="5"
+                    android:maxLines="1"
+                    />
+                <Switch
+                    android:id="@+id/swt_clouthes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="6"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                >
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Uñas (limpias y bien cuidadas)"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    android:layout_weight="5"
+                    android:maxLines="1"
+                    />
+                <Switch
+                    android:id="@+id/swt_nails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="6"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                >
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cabello (Peinado)"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    android:layout_weight="5"
+                    />
+                <Switch
+                    android:id="@+id/swt_hair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="6"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                >
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cubreboca"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    android:layout_weight="5"
+                    />
+                <Switch
+                    android:id="@+id/swt_mask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:weightSum="6"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                >
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:text="Saludo y cortecia"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    android:layout_weight="5"
+                    />
+                <Switch
+                    android:id="@+id/swt_courtesy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            >
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Cientes Atentidos:"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:layout_weight="5"
+                />
+
+            <EditText
+                android:id="@+id/edit_clients"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="number"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            >
+
+            <TextView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Servicios Vendidos:"
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:layout_weight="5"
+                />
+
+            <EditText
+                android:id="@+id/edit_services"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="number"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/bottom_rounded"
+            android:text="Enviar"
+            android:textAllCaps="false"
+            android:textSize="18dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>
