@@ -5,84 +5,119 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/cardview_dark_background"
-    android:padding="20dp"
     tools:context=".FirstFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
-        <LinearLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-            <ImageButton
-                android:id="@+id/btn_new_evaluation"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:background="@drawable/bottom_rounded"
-                android:scaleType="centerCrop"
-                app:srcCompat="@android:drawable/ic_input_add" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Agregar evaluacion"
-                android:textColor="@color/white"
-                android:layout_marginLeft="20dp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/corners_rounded"
-            android:orientation="vertical"
-            android:padding="20dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:background="@color/blue_dark"
             >
 
             <LinearLayout
-                android:layout_marginVertical="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bienvenido: Admin"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"/>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            >
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Pricesmart"
-                    android:textColor="@color/white"/>
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:text="Evaluaciones: 10"
-                    android:textAllCaps="false"/>
+                <ImageButton
+                    android:id="@+id/btn_new_evaluation"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bottom_rounded"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Agregar evaluacion"
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginVertical="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/corners_rounded"
                 android:orientation="vertical"
-                >
-                <TextView
+                android:padding="20dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Colonia"
-                    android:textColor="@color/white"/>
+                    android:layout_marginVertical="20dp"
+                    android:orientation="vertical">
 
-                <Button
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pricesmart"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/eva_pricesmart"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:text="Evaluaciones: 10"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:text="Evaluaciones: 11"
-                    android:textAllCaps="false"/>
-            </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:orientation="vertical">
 
-        </LinearLayout>
-    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Colonia"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/eva_colonia"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:text="Evaluaciones: 11"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
 
 </FrameLayout>

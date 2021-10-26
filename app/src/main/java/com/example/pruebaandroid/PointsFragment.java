@@ -4,6 +4,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -92,9 +94,6 @@ public class PointsFragment extends Fragment {
     }
 
     private void saveEvaluation() {
-//        final String sTask = editTextTask.getText().toString().trim();
-//        final String sDesc = editTextDesc.getText().toString().trim();
-//        final String sFinishBy = editTextFinishBy.getText().toString().trim();
 
         if (num_clients.getText().toString().isEmpty()) {
             num_clients.setError("Numero de clientes requerido");
@@ -149,10 +148,17 @@ public class PointsFragment extends Fragment {
                 super.onPostExecute(aVoid);
 
                 Toast.makeText(getContext(), "Se a guardado la Evaluacion", Toast.LENGTH_SHORT).show();
+
+                back();
             }
         }
 
         SaveTask st = new SaveTask();
         st.execute();
+    }
+
+    public void back(){
+        FragmentManager transaction = getActivity().getSupportFragmentManager();
+        transaction.popBackStack();
     }
 }
